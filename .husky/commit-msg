@@ -1,0 +1,19 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 检查是否是通过我们的脚本提交的
+if [ -z "$HUSKY_SKIP_CZ" ] && [ -t 1 ]; then
+    export HUSKY_SKIP_CZ=true # 设置标识，防止二次触发
+    exec < /dev/tty && node ./commit-prompt.js # 触发我们的交互式提交脚本
+    exit 1 # 阻止默认提交流程
+fi
+
+# 检查提交信息是否为空
+COMMIT_MSG=$(cat "$1")
+if [ -z "$COMMIT_MSG" ] || [ "$COMMIT_MSG" = "" ]; then
+    echo "错误: 提交信息不能为空。请提供有效的提交描述。"
+    exit 1
+fi
+
+# 若已指定 message 或通过脚本提交，直接进行 commitlint 检查
+npx --no-install commitlint --edit "$1"

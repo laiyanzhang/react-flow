@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "aiMember": "AI Members",
+    "aiGroups": "AI Groups",
+    "workflow": "Workflow",
+    "aiMarket": "AI Market",
+    "materialLibrary": "Material Library",
+    "knowledgeBase": "Knowledge Base",
+    "projectCenter": "Project Center"
+  },
+  "badges": {
+    "new": "New",
+    "pro": "Pro",
+    "beta": "Beta"
+  },
+  "status": {
+    "systemRunning": "System running normally"
+  }
+}

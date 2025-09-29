@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "dashboard": "工作台",
+    "aiMember": "AI员工",
+    "aiGroups": "AI群组",
+    "workflow": "工作流",
+    "aiMarket": "AI市场",
+    "materialLibrary": "素材库",
+    "knowledgeBase": "知识库",
+    "projectCenter": "项目中心"
+  },
+  "badges": {
+    "new": "New",
+    "pro": "Pro",
+    "beta": "Beta"
+  },
+  "status": {
+    "systemRunning": "系统运行正常"
+  }
+}

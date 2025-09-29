@@ -1,0 +1,25 @@
+.header-bar-tabs {
+  :global(.ant-tabs-nav) {
+    margin: 0;
+
+    &::before {
+      content: none;
+    }
+
+  }
+
+  :global(.ant-tabs-tab) {
+    padding: 21px 0 !important;
+  }
+}
+
+.headerLogo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  .text {
+    color: #4155F0;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
